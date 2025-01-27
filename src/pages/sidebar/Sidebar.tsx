@@ -60,7 +60,7 @@ export default function ISidebar() {
           <Layout>
             <Sider trigger={null} collapsible collapsed={collapsed} className="h-screen">
               <div />
-              <Link to="/" className="flex items-center">
+              <Link to="/user" className="flex items-center">
                 <img src={logo} alt="" className="visible mx-auto mt-4 w-12 h-12" />
               </Link>
               <Menu

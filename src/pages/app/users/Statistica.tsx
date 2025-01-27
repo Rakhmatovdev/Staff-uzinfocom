@@ -7,16 +7,16 @@ import { format } from "date-fns";
 
 const { TabPane } = Tabs;
 const Statistic = () => {
-    // const { data:user} = useQuery({
-    //     queryKey: ["users"],
-    //     queryFn: userService.users,
-    // });
+    const { data:user} = useQuery({
+        queryKey: ["users"],
+        queryFn: userService.users,
+    });
         // console.log(user);
 
-        const { data:user} = useQuery({
-            queryKey: ["users1"],
-            queryFn: userService.loc,
-        });
+        // const { data:user} = useQuery({
+        //     queryKey: ["users1"],
+        //     queryFn: userService.loc,
+        // });
 
 // console.log(user1);
 
@@ -448,11 +448,11 @@ const Statistic = () => {
                      </div>)}
                      <div className="flex gap-4 py-2">
                      <p className="w-[300px]">Masala yechish: Oddiy</p>
-                     <p>{user?.employee_level_evaluation?.next_level_gaps?.gaps.problem_solving_easy}</p>
+                     <p>{user?.employee_level_evaluation?.next_level_gaps?.gaps.problem_solving_easy?user?.employee_level_evaluation?.next_level_gaps?.gaps.problem_solving_easy:0}</p>
                      </div>
                      <div className="flex gap-4 py-2">
                 <p className="w-[300px]">Mentorlik qilish (dasturchi soni)</p>
-                <p>{user.employee_level_evaluation?.next_level_gaps?.gaps.mentorship_count}</p>
+                <p>{user.employee_level_evaluation?.next_level_gaps?.gaps.mentorship_count?user.employee_level_evaluation?.next_level_gaps?.gaps.mentorship_count:0}</p>
               </div>
                      <div className="flex gap-4 py-2">
                 <p className="w-[300px]">Loyihani testlashda ishtirok etish (soni)</p>
@@ -472,7 +472,7 @@ const Statistic = () => {
               <div className="flex p-4 items-center">
                 <p className="w-[400px] font-semibold">Keyingi daraja talablari</p>
                 <div>                
-                  {user?.employee_level_evaluation?.next_level_requirements.map((item:any)=>(<>
+                  {user?.employee_level_evaluation?.next_level_requirements !==null ?  user.employee_level_evaluation.next_level_requirements.map((item:any)=>(<>
                  <div key={item.language} className="flex gap-4 py-2">
                   <p className="w-[300px]">Dasturlash tili:</p>
                   <p>{item.language}</p>
@@ -485,7 +485,7 @@ const Statistic = () => {
                   <p className="w-[300px]">Dasturlash tili asoslari:</p>
                   <p className="w-[300px]">{(item.requirements.replaceAll(/\r/g, "'"))}</p>
                  </div>
-                  </>))}
+                  </>)):"Talablar mavjud emas"}
 
 
                 </div>
