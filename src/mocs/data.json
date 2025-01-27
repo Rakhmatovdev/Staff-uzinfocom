@@ -1,0 +1,349 @@
+{
+    "user":[
+        {
+            "id": 13,
+            "first_name": "aaaaaaaaaaaa",
+            "last_name": "bbbbbbbbbbb",
+            "email": "aaa@gmail.com",
+            "username": "aaa132",
+            "phone": "+998930973571",
+            "birth_date": null,
+            "address": "",
+            "profile_picture": null,
+            "position": "developer",
+            "level": "intern",
+            "hired_date": null,
+            "organization": {
+              "name": "Toshkent filial",
+              "parent": null,
+              "unit_type": "branch"
+            },
+            "specialty": null,
+            "skills": [
+              {
+                "id": 1,
+                "skill": "Python",
+                "level": "expert"
+              }
+            ],
+            "additional_languages": [
+              {
+                "language": "python"
+              },
+              {
+                "language": "php"
+              }
+            ],
+            "social_media_accounts": [
+              {
+                "social_media": "facebook",
+                "url": "https://facebook.com"
+              },
+              {
+                "social_media": "facebook",
+                "url": "https://github.com"
+              }
+            ],
+            "experiences": [
+              {
+                "position": "asaaaaaaaaaaa",
+                "company": "aaaaaaaaaaa",
+                "start_date": "2000-01-20",
+                "end_date": null,
+                "address": "",
+                "description": "",
+                "skills": []
+              },
+              {
+                "position": "test",
+                "company": "test",
+                "start_date": "2015-01-14",
+                "end_date": "2016-05-26",
+                "address": "",
+                "description": "",
+                "skills": []
+              },
+              {
+                "position": "test",
+                "company": "test",
+                "start_date": "2020-05-23",
+                "end_date": "2020-12-31",
+                "address": "",
+                "description": "",
+                "skills": []
+              },
+              {
+                "position": "aaaaaa",
+                "company": "aaaaaa",
+                "start_date": "2023-01-09",
+                "end_date": "2025-01-14",
+                "address": "",
+                "description": "",
+                "skills": [
+                  {
+                    "id": 2,
+                    "skill": "Django",
+                    "level": "expert"
+                  }
+                ]
+              },
+              {
+                "position": "Back",
+                "company": "est",
+                "start_date": "2024-05-14",
+                "end_date": null,
+                "address": "",
+                "description": "",
+                "skills": []
+              }
+            ],
+            "tasks": [
+              {
+                "name": "test",
+                "description": "",
+                "deadline": "2025-01-09",
+                "status": "pending",
+                "start_date": "2025-01-09",
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "main",
+                "role_in_project": {
+                  "role_in_project": "Project Architecture"
+                }
+              },
+              {
+                "name": "Test",
+                "description": "",
+                "deadline": "2025-01-14",
+                "status": "pending",
+                "start_date": null,
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "main",
+                "role_in_project": {
+                  "role_in_project": "Project Testing"
+                }
+              },
+              {
+                "name": "database",
+                "description": "",
+                "deadline": null,
+                "status": "pending",
+                "start_date": null,
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "main",
+                "role_in_project": {
+                  "role_in_project": "Database Architecture"
+                }
+              },
+              {
+                "name": "additional",
+                "description": "",
+                "deadline": null,
+                "status": "pending",
+                "start_date": null,
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "additional",
+                "role_in_project": {
+                  "role_in_project": "Database Architecture"
+                }
+              },
+              {
+                "name": "test",
+                "description": "",
+                "deadline": "2025-01-14",
+                "status": "pending",
+                "start_date": null,
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "main",
+                "role_in_project": {
+                  "role_in_project": "Project Testing"
+                }
+              },
+              {
+                "name": "additional 2",
+                "description": "",
+                "deadline": "2025-01-14",
+                "status": "processing",
+                "start_date": "2025-01-14",
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "additional",
+                "role_in_project": {
+                    "role_in_project": "Database Architecture"
+                }
+              },
+              {
+                "name": "test",
+                "description": "",
+                "deadline": null,
+                "status": "pending",
+                "start_date": "2025-01-15",
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "main",
+                "role_in_project": {
+                  "role_in_project": "Project Testing"
+                }
+              },
+              {
+                "name": "additional",
+                "description": "",
+                "deadline": null,
+                "status": "pending",
+                "start_date": null,
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "additional",
+                "role_in_project": {
+                  "role_in_project": "Database Architecture"
+                }
+              },
+              {
+                "name": "additional",
+                "description": "",
+                "deadline": null,
+                "status": "pending",
+                "start_date": null,
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "additional",
+                "role_in_project": {
+                  "role_in_project": "Database Architecture"
+                }
+              },
+              {
+                "name": "asas",
+                "description": "",
+                "deadline": null,
+                "status": "pending",
+                "start_date": null,
+                "end_date": null,
+                "project": {
+                  "name": "test",
+                  "description": "test"
+                },
+                "task_type": "additional",
+                "role_in_project": {
+                  "role_in_project": "Project Testing"
+                }
+              }
+            ],
+            "problem_solving": [
+              {
+                "easy": 14,
+                "medium": 31,
+                "hard": 40,
+                "platform": "leetcode"
+              },
+              {
+                "easy": 21,
+                "medium": 20,
+                "hard": 33,
+                "platform": "codeforces"
+              }
+            ],
+            "mentorship": [
+              {
+                "student": {
+                  "id": 2,
+                  "first_name": "Sukhrob",
+                  "last_name": "Ovlayev"
+                },
+                "start_date": "2025-01-09",
+                "end_date": null
+              },
+              {
+                "student": {
+                  "id": 2,
+                  "first_name": "Sukhrob",
+                  "last_name": "Ovlayev"
+                },
+                "start_date": "2025-01-20",
+                "end_date": null
+              }
+            ],
+            "lecture": [
+              {
+                "title": "metup1",
+                "description": "",
+                "date": "2025-01-09",
+                "files": [
+                  {
+                    "title": "test",
+                    "description": "test",
+                    "file": "/media/lectures/employers_hu2UOlT.sql"
+                  }
+                ]
+              },
+              {
+                "title": "asasa",
+                "description": "",
+                "date": "2025-01-09",
+                "files": []
+              }
+            ],
+            "employee_level_evaluation": {
+              "problem_solving_easy": 30,
+              "problem_solving_medium": 50,
+              "problem_solving_hard": 73,
+              "mentorship_count": 1,
+              "project_test_count": 3,
+              "project_architecture_count": 1,
+              "database_architecture_count": 1,
+              "additional_tasks_count": 5,
+              "experience_years": 4,
+              "meetup_lecture_count": 2,
+              "other_programming_languages_count": 2,
+              "level": "middle",
+              "next_level_gaps": {
+                "next_level": "strong_middle",
+                "gaps": {
+                  "problem_solving_easy": 10,
+                  "mentorship_count": 1,
+                  "project_test_count": 1,
+                  "additional_tasks_count": 3,
+                  "meetup_lecture_count": 2
+                }
+              },
+              "next_level_requirements": [
+                {
+                  "language": "python",
+                  "level": "strong_middle",
+                  "requirements": "Asoslar:\r\n- Murakkab debugging.\r\n- Kodning modularligi.\r\n- Performance profiling.\r\n\r\nAlgoritm:\r\n- Murakkab algoritmlar va ma'lumotlar tuzilmalari bilan ishlash.\r\n- Optimal ma'lumotlar tuzilmalari tanlash.\r\n- Dinamik dasturlash masalalarini samarali yechish.\r\n\r\nMa'lumotlar bazasi:\r\n- Distributed databases tushunchasi (sharding, replication).\r\n- SQL optimizatsiyasi.\r\n- Indeksatsiya va query optimizatsiya texnikalari.\r\n\r\nFrontend:\r\n- WebSockets yoki boshqa texnologiyalar orqali frontend bilan integratsiya qilish.\r\n- Frontend optimallashtirish.\r\n\r\nArxitektura:\r\n- Frontend va backendni integratsiya qilish.\r\n- Muammoni aniqlay olish.\r\n- High-availability va fault-tolerant tizimlarni tushunish.\r\n- DDD (Domain-Driven Design)ni tushunish.\r\n\r\nVersiya nazorati:\r\n- Git Hooks bilan ishlash.\r\n\r\nDevOps:\r\n- Container orchestration vositalari bilan ishlash.\r\n- CI/CD uchun GitLab Actions yoki GitHub Actions.\r\n- Log va monitoring vositalarini tushunish.\r\n\r\nXavfsizlikning eng yaxshi amaliyotlarini tushunish."
+                }
+              ]
+            }
+          }
+    ]
+}
