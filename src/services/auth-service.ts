@@ -1,10 +1,5 @@
 import authApi, { endpoints } from "@/lib/axios/authApi";
 import { LoginData } from "@/types";
-import { useNavigate } from "react-router";
-
-
-
-const navigate=useNavigate()
 export const AuthService = {
 
 
@@ -39,7 +34,7 @@ export const AuthService = {
     logout: (): void => {
         localStorage.removeItem('role');
         localStorage.removeItem('accessToken');
-        navigate('/');
+       
         
     },
 
