@@ -14,6 +14,7 @@ const Login = () => {
         try {
             const token = await AuthService.login(data);
             if (token) {
+                
                 navigate('/user');
                 reset();
             }
@@ -78,7 +79,7 @@ const Login = () => {
                             </div>
                             <button
                                 type="submit"
-                               className="  " >
+                               className="" >
                                 Sign in
                             </button>
                             <div className="register">
