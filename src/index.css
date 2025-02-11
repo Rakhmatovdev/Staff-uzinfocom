@@ -249,7 +249,7 @@
 	@apply text-sm sm:text-lg font-semibold
   }
   .soh{
-    @apply h-[86.2vh] bg-gray-50 overflow-y-auto scroll-smooth scroll-m-0
+    @apply h-[91.8vh] bg-gray-50 overflow-y-auto scroll-smooth scroll-m-0
   }
  
 }

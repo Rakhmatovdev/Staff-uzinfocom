@@ -90,7 +90,6 @@ export default function ISidebar() {
               </Header>
               <Content
                 style={{
-                  
                   minHeight: 280,
                   background: colorBgContainer,
                 }}
