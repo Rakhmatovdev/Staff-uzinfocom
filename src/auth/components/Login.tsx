@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import {useNavigate} from "react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AuthService  from "@/services/auth-service.ts";
 import {LoginData} from "@/types";
 import { notification } from "antd";
@@ -8,18 +8,22 @@ import heroBg from '../../../public/hero-bg.jpg'
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<LoginData>();
     const navigate = useNavigate();
+    const [loading, setLoading] = useState<boolean>(false)
 
     // Handle form submission
     const onSubmit: SubmitHandler<LoginData> = async (data) => {
         try {
+             setLoading(true)
             const token = await AuthService.login(data);
             if (token) {
-                
+                setLoading(false)
                 navigate('/user');
                 reset();
+                
             }
-
+setLoading(false)
         } catch (error: any) {
+            setLoading(false)
             console.error(error.message);
             notification.error({message: error.message});
         }
@@ -79,7 +83,7 @@ const Login = () => {
                             </div>
                             <button
                                 type="submit"
-                               className="" >
+                               className={`${loading && 'opacity-50'}`} disabled={loading}>
                                 Sign in
                             </button>
                             <div className="register">

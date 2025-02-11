@@ -11,15 +11,6 @@ const Statistic = () => {
         queryKey: ["users"],
         queryFn: userService.users,
     });
-        // console.log(user);
-
-        // const { data:user} = useQuery({
-        //     queryKey: ["users1"],
-        //     queryFn: userService.loc,
-        // });
-
-// console.log(user1);
-
     return (
         <div className="soh">
             <UBreadcrumb items={itemStatistic} />
@@ -39,52 +30,52 @@ const Statistic = () => {
             key="1"
           >
             <section className="text-gray-600">
-            <table className=" table-auto   w-full">
+            <table className=" table-auto   w-full border">
          {user && (
              <thead className=" text-gray-700">
-             <tr className="mt-10">
-               <th className="px-6 py-3 text-left text-sm font-medium">Ism</th><th>{user.first_name}</th>
+             <tr className="mt-10 border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ism</th><th>{user.first_name}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Familiya</th><th>{user.last_name}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Familiya</th><th>{user.last_name}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Email</th><th>{user.email==null?"-":user.email}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Email</th><th>{user.email==null?"-":user.email}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Username</th><th>{user.username}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Username</th><th>{user.username}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Telefon</th><th>{user.phone==null?"-":user.phone}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Telefon</th><th>{user.phone==null?"-":user.phone}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Tug'ilgan kun</th><th>{user.birth_date==null?"-":user.birth_date}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tug'ilgan kun</th><th>{user.birth_date==null?"-":user.birth_date}</th>
 
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Address</th><th>{user.address==""?"-":user.address}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Address</th><th>{user.address==""?"-":user.address}</th>
              </tr>
             
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Lavozim</th><th>{user.position==""?"-":user.position}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Lavozim</th><th>{user.position==""?"-":user.position}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Daraja</th><th>{user.level==null?"-":user.level}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Daraja</th><th>{user.level==null?"-":user.level}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Ishga olingan sana</th><th>{user.hired_date==null?"-":user.hired_date}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ishga olingan sana</th><th>{user.hired_date==null?"-":user.hired_date}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Tuzilma</th><th>{user.organization.name==null?"-":user.organization.name}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tuzilma</th><th>{user.organization.name==null?"-":user.organization.name}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Mutaxassislik</th><th>{user.specialty==null?"-":user.specialty}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Mutaxassislik</th><th>{user.specialty==null?"-":user.specialty}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Qobiliyat</th><th>{!user.skills.length?"-":user.skills.map((item:any)=><span key={item.skill}>{item.skill}</span>,)}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Qobiliyat</th><th>{!user.skills.length?"-":user.skills.map((item:any)=><span key={item.skill}>{item.skill}</span>,)}</th>
              </tr>
-             <tr>
-               <th className="px-6 py-3 text-left text-sm font-medium">Boshqa dasturlash tillari</th><th>{!user.additional_languages.length?"-":user.additional_languages.map((item:any,index:number)=>item.language+`${user.additional_languages.length-1>index?", ":""}`)}</th>
+             <tr className="border">
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Boshqa dasturlash tillari</th><th>{!user.additional_languages.length?"-":user.additional_languages.map((item:any,index:number)=>item.language+`${user.additional_languages.length-1>index?", ":""}`)}</th>
              </tr>
            </thead>
          )}
@@ -126,12 +117,12 @@ const Statistic = () => {
                         {user?.experiences.map((task:any,index:number) => (
                                 <tr
                                     key={index}
-                                    className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                                    className="  bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                                 >
                                 
                                     <td
                           
-                                        className="tp "
+                                        className="tp"
                                     >
                                         <p className="tp">{task.position}</p>
                                     </td>
@@ -384,53 +375,53 @@ const Statistic = () => {
             tab={<span className="text-gray-700 font-medium">Xodimning daraja baholanishi</span>}
             key="8"
           >
-            {user?.employee_level_evaluation && (<div>
+            {user?.employee_level_evaluation && (<div className="border">
 
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Masala yechish darajasi: Oddiy</p>
                 <p>{user.employee_level_evaluation.problem_solving_easy}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Masala yechish darajasi: O'rta</p>
                 <p>{user.employee_level_evaluation.problem_solving_medium}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Masala yechish darajasi: Yuqori</p>
                 <p>{user.employee_level_evaluation.problem_solving_hard}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Mentorlik qilish (dasturchi soni)</p>
                 <p>{user.employee_level_evaluation.mentorship_count}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Loyihani testlashda ishtirok etish (soni)</p>
                 <p>{user.employee_level_evaluation.project_test_count}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Loyiha arxitekturasida ishtirok etish (soni)</p>
                 <p>{user.employee_level_evaluation.project_architecture_count}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Database arxitekturasini tuzishda qatnashish (soni)</p>
                 <p>{user.employee_level_evaluation.database_architecture_count}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Orttirib bajarilgan topshiriqlar</p>
                 <p>{user.employee_level_evaluation.additional_tasks_count}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Dasturlash sohasida ish tajribasi (yil)</p>
                 <p>{user.employee_level_evaluation.experience_years}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">MeetUp larda ma'ruza o'qish (soni)</p>
                 <p>{user.employee_level_evaluation.meetup_lecture_count}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Boshqa dasturlash tillarida tajribasi (soni)</p>
                 <p>{user.employee_level_evaluation.other_programming_languages_count}</p>
               </div>
-              <div className="flex p-4">
+              <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Level</p>
                 <p>{user.employee_level_evaluation.level}</p>
               </div>

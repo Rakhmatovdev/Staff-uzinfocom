@@ -3,7 +3,7 @@
     export const itemPassword=[
       {
         title: 'Home',
-        href:"/"
+        href:"#"
       },
       {
         title: 'Password change'
@@ -13,7 +13,7 @@
     export const itemSetting=[
       {
         title: 'Home',
-        href:"/"
+        href:"#"
       },
       {
         title: 'Users',
@@ -28,7 +28,7 @@
     export const itemStatistic=[
       {
         title: "Home",
-        href: "/",
+        href: "#",
       },
       {
         title: "Xodim",
