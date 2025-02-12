@@ -8,7 +8,7 @@ export const AuthService = {
             const response = await authApi.post(endpoints.auth.signIn, data);
             const token = response.data.tokens.access;
             localStorage.setItem('accessToken', token);
-            localStorage.setItem('role', response.data.user);
+            localStorage.setItem('role', JSON.stringify(response.data.user));
             return token;
         } catch (error) {
             console.error("Login failed", error);

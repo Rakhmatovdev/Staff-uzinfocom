@@ -3,6 +3,10 @@ import { TDeleted } from "@/types";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 const PersonalInfo = () => {
+ const userProfile = JSON.parse(localStorage.getItem('role')||"")
+
+  
+  
      const {
              control,
              handleSubmit
@@ -19,7 +23,8 @@ const PersonalInfo = () => {
       <p className=" sm:text-lg font-semibold sm:pr-[22px]">
         Full Name <span className="text-rose-500">*</span>
       </p>
-      <UInput name="name" control={control} className="sm:w-[495px] sm:h-9" />
+      {/* @ts-ignore */}
+      <UInput name="name" control={control} className="sm:w-[495px] sm:h-9" value={userProfile?.first_name+" "+userProfile?.last_name} />
     </div>
 
   
@@ -31,13 +36,16 @@ const PersonalInfo = () => {
         name="email"
         control={control}
         className="sm:w-[495px] sm:h-9"
+        // @ts-ignore
+        value={userProfile?.email}
       />
     </div>
     <div className="fff  sm:gap-32">
-      <p className="sm:text-lg font-semibold sm:pr-[52px]">
-       Phone <span className="text-rose-500">*</span>
+      <p className="sm:text-lg font-semibold sm:pr-[37px]">
+       Position <span className="text-rose-500">*</span>
       </p>
-      <UInput name="phone" control={control} className="sm:w-[495px] sm:h-9" />
+      {/* @ts-ignore */}
+      <UInput name="position" control={control} className="sm:w-[495px] sm:h-9" value={userProfile?.position}/>
     </div>
   </form>
   )

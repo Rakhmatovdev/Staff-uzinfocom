@@ -1,9 +1,11 @@
 import UBreadcrumb from "@/components/ui/UBreadcrumb";
 import userService from "@/services/user-service";
+import { useProfile } from "@/store/useProfile";
 import {  itemStatistic } from "@/types/data";
 import {  useQuery } from "@tanstack/react-query";
 import { Tabs } from "antd";
 import { format } from "date-fns";
+import { useEffect } from "react";
 
 const { TabPane } = Tabs;
 const Statistic = () => {
@@ -11,6 +13,17 @@ const Statistic = () => {
         queryKey: ["users"],
         queryFn: userService.users,
     });
+    const {setUserProfile}=useProfile(data=>data)
+console.log(user);
+
+useEffect(()=>{
+  const prerendeer= async()=>{
+    await setUserProfile(user)
+  }
+  prerendeer()
+
+},[])
+
     return (
         <div className="soh">
             <UBreadcrumb items={itemStatistic} />

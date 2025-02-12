@@ -1,8 +1,12 @@
 import { CalendarOutlined, FieldTimeOutlined } from "@ant-design/icons";
 import { DatePicker, TimePicker } from "antd";
+import { format } from "date-fns";
+import dayjs from "dayjs";
 import { useState } from "react";
 
 const ImportandDate = () => {
+  const datan=Date()
+  console.log(datan);
 
   const [date, setDate] = useState(null);
 
@@ -19,7 +23,7 @@ console.log(date);
         <div className="">
          <div className="flex flex-col">
             <span>Date:</span>
-            <DatePicker onChange={handleChange} />
+            <DatePicker onChange={handleChange}/>
           <div className="flex gap-1 sm:mt-2"> <span> Today | </span> <CalendarOutlined/></div>
          </div>
          <div className="flex flex-col mt-2">
