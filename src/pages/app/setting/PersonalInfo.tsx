@@ -4,9 +4,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 
 const PersonalInfo = () => {
  const userProfile = JSON.parse(localStorage.getItem('role')||"")
-
-  
-  
      const {
              control,
              handleSubmit
