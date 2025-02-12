@@ -17,7 +17,7 @@ const Navbar = () => {
 const navigate=useNavigate()
 const handleClick = () => {
     authService.logout();
-  navigate("/login")
+  navigate("/")
 }
 
   return (
