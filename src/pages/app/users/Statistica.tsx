@@ -6,7 +6,7 @@ import {  useQuery } from "@tanstack/react-query";
 import { Tabs } from "antd";
 import { format } from "date-fns";
 import { useEffect } from "react";
-
+import {FacebookOutlined, GithubOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
 const { TabPane } = Tabs;
 const Statistic = () => {
     const { data:user} = useQuery({
@@ -43,7 +43,7 @@ useEffect(()=>{
             key="1"
           >
             <section className="text-gray-600">
-            <table className=" table-auto   w-full border">
+            <table className=" table-auto   w-[95%] border mt-4 sm:mt-7 mx-8">
          {user && (
              <thead className=" text-gray-700">
              <tr className="mt-10 border">
@@ -96,8 +96,80 @@ useEffect(()=>{
             </section>
           </TabPane>
           <TabPane
-            tab={<span className="text-gray-700 font-medium">Ish tajriba</span>}
+            tab={<span className="text-gray-700 font-medium">O'quv ma'lumotlari</span>}
             key="2"
+          >
+            <section className="text-gray-600">
+ <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mt-7">
+                    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                           
+                            <th scope="col" className="tp">
+                         <p className="pl-5"> OTM </p>
+                            </th>
+                            <th scope="col" className="tp ">
+                           Fakultet
+                            </th>
+                            <th scope="col" className="tp">
+                           Mutahasisligi
+                            </th>
+                            <th scope="col" className="tp">
+                            ta'lim turi
+                            </th>
+                            <th scope="col" className="tp ">
+                           Boshlanga sana
+                            </th>
+                            
+                            <th scope="col" className="tp ">
+                             Address
+                            </th>
+                            <th scope="col" className="tp ">
+                           Tugatgan sana
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {user?.employee_education.map((edu:any,index:number) => (
+                                <tr
+                                    key={index}
+                                    className="  bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                                >
+                                
+                                    <td
+                          
+                                        className="tp"
+                                    >
+                                        <p className="tp">{edu.name}</p>
+                                    </td>
+                                    <td className="tp">
+                                      <p>{edu.faculty}</p>
+                                    </td>
+                                    <td className="tp">
+                                      <p>{edu.specialization}</p>
+                                    </td>
+                                    <td className="tp">
+                                      <p>{edu.education_type}</p>
+                                    </td>
+                                    <td className="tp">
+                                    <p >{edu.start_date?format(edu.start_date, "dd MMMM yyyy"):"-"}</p>
+                                    </td>
+                                    <td className="tp">{edu?.address==""?"-":edu?.address}</td>
+                                    <td className="tp">
+                                    <li>{edu.end_date?format(edu.end_date, "dd MMMM yyyy"):"-"}</li>
+                                    </td>
+                                    {/* <td className="tp">{edu?.skills.length>0?edu?.skills?.map((item:any)=><p key={item.id}>{item.skill}</p>):"-"}</td> */}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+          </TabPane>
+          <TabPane
+            tab={<span className="text-gray-700 font-medium">Ish tajriba</span>}
+            key="3"
           >
             <section className="text-gray-600">
  <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mt-7">
@@ -160,17 +232,21 @@ useEffect(()=>{
           </TabPane>
           <TabPane
             tab={<span className="text-gray-700 font-medium">Ijtimoiy tarmoqlar</span>}
-            key="3"
+            key="4"
           >
-            <div className="flex flex-col">
-              {user?.social_media_accounts.map((item:any,index:number)=>(<a target="_blank" href={item.url} key={index}>
-             {item.social_media}
+            <div className="my-4 sm:my-7 ml-8">
+              {user?.social_media_accounts.map((item:any,index:number)=>(<a target="_blank" href={item.url} key={index} className="flex items-center gap-2">
+             {item.social_media=='github' && <GithubOutlined className="text-2xl text-gray-500 hover:text-gray-700" />}
+              {item.social_media=='linkedin' && <LinkedinOutlined className="text-2xl text-blue-500 hover:text-blue-700" />}
+              {item.social_media=='telegram' && <img src="https://img.icons8.com/color/48/000000/telegram-app--v1.png" alt="telegram" className="w-8 h-8" />}
+              {item.social_media=='facebook' && <FacebookOutlined className="text-2xl text-blue-500 hover:text-blue-700"/>}
+              {item.social_media=='instagram' && <InstagramOutlined className="text-2xl text-rose-500 hover:text-rose-700"/>}
               </a>))}
             </div>
           </TabPane>
           <TabPane
             tab={<span className="text-gray-700 font-medium">Topshiriqlar</span>}
-            key="4"
+            key="5"
           >
            <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mt-7">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -233,8 +309,8 @@ useEffect(()=>{
                 </div>
           </TabPane>
           <TabPane
-            tab={<span className="text-gray-700 font-medium">Mentorlik qilish</span>}
-            key="5"
+            tab={<span className="text-gray-700 font-medium">Mentorlari</span>}
+            key="6"
           >
              <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mt-7">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -289,7 +365,7 @@ useEffect(()=>{
           </TabPane>
           <TabPane
             tab={<span className="text-gray-700 font-medium">Meetup maruza</span>}
-            key="6"
+            key="7"
           >
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mt-7">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -334,7 +410,7 @@ useEffect(()=>{
           </TabPane>
           <TabPane
             tab={<span className="text-gray-700 font-medium">Masala yechish</span>}
-            key="7"
+            key="8"
           >
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 sm:mt-7">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -386,9 +462,9 @@ useEffect(()=>{
           </TabPane>
           <TabPane
             tab={<span className="text-gray-700 font-medium">Xodimning daraja baholanishi</span>}
-            key="8"
+            key="9"
           >
-            {user?.employee_level_evaluation && (<div className="border">
+            {user?.employee_level_evaluation && (<div className="border mt-4 sm:mt-7 mx-8">
 
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Masala yechish darajasi: Oddiy</p>
@@ -403,7 +479,7 @@ useEffect(()=>{
                 <p>{user.employee_level_evaluation.problem_solving_hard}</p>
               </div>
               <div className="flex p-4 border">
-                <p className="w-[400px] font-semibold">Mentorlik qilish (dasturchi soni)</p>
+                <p className="w-[400px] font-semibold">Mentorlari (dasturchi soni)</p>
                 <p>{user.employee_level_evaluation.mentorship_count}</p>
               </div>
               <div className="flex p-4 border">
@@ -448,7 +524,7 @@ useEffect(()=>{
                      </div>
                {user?.employee_level_evaluation?.experience_years<5 && ( <div className="flex gap-4">
                   <p className="w-[300px]">Dasturlash sohasida ish tajribasi kerak (yil):</p>
-                     <p>{5-user?.employee_level_evaluation.experience_years}</p>
+                     <p>{5-Math.floor(user?.employee_level_evaluation.experience_years)}</p>
                      </div>)}
                      <div className="flex gap-4 py-2">
                      <p className="w-[300px]">Masala yechish: Oddiy</p>
@@ -477,17 +553,17 @@ useEffect(()=>{
                 <p className="w-[400px] font-semibold">Keyingi daraja talablari</p>
                 <div>                
                   {user?.employee_level_evaluation?.next_level_requirements !==null ?  user.employee_level_evaluation.next_level_requirements.map((item:any)=>(<>
-                 <div key={item.language} className="flex gap-4 py-2">
+                 <div key={item.language} className="flex1 gap-4 py-2">
                   <p className="w-[300px]">Dasturlash tili:</p>
                   <p>{item.language}</p>
                  </div>
-                 <div className="flex gap-4 py-2">
+                 <div className="flex1 gap-4 py-2">
                   <p className="w-[300px]">Dasturlash tili darajasi:</p>
                   <p>{item.level}</p>
                  </div>
                  <div className="flex gap-4 py-2">
-                  <p className="w-[300px]">Dasturlash tili asoslari:</p>
-                  <p className="w-[300px]">{(item.requirements.replaceAll(/\r/g, "'"))}</p>
+                  {/* <p className="w-[300px]">Dasturlash tili asoslari:</p> */}
+                  <div className="w-[600px]">{item.requirements.replaceAll('"',"").split('\n').map((word:string)=><p key={word}>{word}<br /></p>)}</div>
                  </div>
                   </>)):"Talablar mavjud emas"}
 
