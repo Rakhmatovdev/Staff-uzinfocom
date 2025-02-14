@@ -14,7 +14,6 @@ const Statistic = () => {
         queryFn: userService.users,
     });
     const {setUserProfile}=useProfile(data=>data)
-console.log(user);
 
 useEffect(()=>{
   const prerendeer= async()=>{
@@ -47,48 +46,48 @@ useEffect(()=>{
          {user && (
              <thead className=" text-gray-700">
              <tr className="mt-10 border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ism</th><th>{user.first_name}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ism</th><th>{user?.first_name}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Familiya</th><th>{user.last_name}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Familiya</th><th>{user?.last_name}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Email</th><th>{user.email==null?"-":user.email}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Email</th><th>{user.email==null?"-":user?.email}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Username</th><th>{user.username}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Username</th><th>{user?.username}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Telefon</th><th>{user.phone==null?"-":user.phone}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Telefon</th><th>{user.phone==null?"-":user?.phone}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tug'ilgan kun</th><th>{user.birth_date==null?"-":user.birth_date}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tug'ilgan kun</th><th>{user.birth_date==null?"-":user?.birth_date}</th>
 
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Address</th><th>{user.address==""?"-":user.address}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Address</th><th>{user.address==""?"-":user?.address}</th>
              </tr>
             
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Lavozim</th><th>{user.position==""?"-":user.position}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Lavozim</th><th>{user.position==""?"-":user?.position}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Daraja</th><th>{user.level==null?"-":user.level}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Daraja</th><th>{user.level==null?"-":user?.level}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ishga olingan sana</th><th>{user.hired_date==null?"-":user.hired_date}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ishga olingan sana</th><th>{user.hired_date==null?"-":user?.hired_date}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tuzilma</th><th>{user.organization.name==null?"-":user.organization.name}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tuzilma</th><th>{user.organization.name==null?"-":user?.organization.name}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Mutaxassislik</th><th>{user.specialty==null?"-":user.specialty}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Mutaxassislik</th><th>{user.specialty==null?"-":user?.specialty}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Qobiliyat</th><th>{!user.skills.length?"-":user.skills.map((item:any)=><span key={item.skill}>{item.skill}</span>,)}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Qobiliyat</th><th>{!user?.skills.length?"-":user?.skills.map((item:any)=><span key={item.skill}>{item.skill}</span>,)}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Boshqa dasturlash tillari</th><th>{!user.additional_languages.length?"-":user.additional_languages.map((item:any,index:number)=>item.language+`${user.additional_languages.length-1>index?", ":""}`)}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Boshqa dasturlash tillari</th><th>{!user?.additional_languages.length?"-":user?.additional_languages.map((item:any,index:number)=>item.language+`${user?.additional_languages.length-1>index?", ":""}`)}</th>
              </tr>
            </thead>
          )}
@@ -140,23 +139,23 @@ useEffect(()=>{
                           
                                         className="tp"
                                     >
-                                        <p className="tp">{edu.name}</p>
+                                        <p className="tp">{edu?.name}</p>
                                     </td>
                                     <td className="tp">
-                                      <p>{edu.faculty}</p>
+                                      <p>{edu?.faculty}</p>
                                     </td>
                                     <td className="tp">
-                                      <p>{edu.specialization}</p>
+                                      <p>{edu?.specialization}</p>
                                     </td>
                                     <td className="tp">
-                                      <p>{edu.education_type}</p>
+                                      <p>{edu?.education_type}</p>
                                     </td>
                                     <td className="tp">
-                                    <p >{edu.start_date?format(edu.start_date, "dd MMMM yyyy"):"-"}</p>
+                                    <p >{edu?.start_date?format(edu.start_date, "dd MMMM yyyy"):"-"}</p>
                                     </td>
                                     <td className="tp">{edu?.address==""?"-":edu?.address}</td>
                                     <td className="tp">
-                                    <li>{edu.end_date?format(edu.end_date, "dd MMMM yyyy"):"-"}</li>
+                                    <li>{edu?.end_date?format(edu.end_date, "dd MMMM yyyy"):"-"}</li>
                                     </td>
                                     {/* <td className="tp">{edu?.skills.length>0?edu?.skills?.map((item:any)=><p key={item.id}>{item.skill}</p>):"-"}</td> */}
                                 </tr>
@@ -209,16 +208,16 @@ useEffect(()=>{
                           
                                         className="tp"
                                     >
-                                        <p className="tp">{task.position}</p>
+                                        <p className="tp">{task?.position}</p>
                                     </td>
                                     <td className="tp">
-                                      <p>{task.company}</p>
+                                      <p>{task?.company}</p>
                                     </td>
                                     <td className="tp">
-                                    <p >{task.start_date?format(task.start_date, "dd MMMM yyyy"):"-"}</p>
+                                    <p >{task?.start_date?format(task.start_date, "dd MMMM yyyy"):"-"}</p>
                                     </td>
                                     <td className="tp">
-                                    <li>{task.end_date?format(task.end_date, "dd MMMM yyyy"):"-"}</li>
+                                    <li>{task?.end_date?format(task.end_date, "dd MMMM yyyy"):"-"}</li>
                                     </td>
                                     <td className="tp">{task?.address==""?"-":task?.address}</td>
                                     <td className="tp">{task?.skills.length>0?task?.skills?.map((item:any)=><p key={item.id}>{item.skill}</p>):"-"}</td>
@@ -288,20 +287,20 @@ useEffect(()=>{
                                       
                                         className="tp "
                                     >
-                                        <p className="tp">{task.name}</p>
+                                        <p className="tp">{task?.name}</p>
                                     </td>
                                     <td className="tp">
-                                      <p>{task.start_date?format(task.start_date, "dd MMMM yyyy"):"-"}</p>
+                                      <p>{task?.start_date?format(task.start_date, "dd MMMM yyyy"):"-"}</p>
                                     </td>
                                     <td className="tp">
-                                    <p >{task.end_date?format(task.end_date, "dd MMMM yyyy"):"-"}</p>
+                                    <p >{task?.end_date?format(task.end_date, "dd MMMM yyyy"):"-"}</p>
                                     </td>
                                     <td className="tp">
-                                    <li>{task.deadline?format(task.deadline, "dd MMMM yyyy"):"-"}</li>
+                                    <li>{task?.deadline?format(task.deadline, "dd MMMM yyyy"):"-"}</li>
                                     </td>
-                                    <td className="tp">{task.task_type}</td>
-                                    <td className="tp">{task.role_in_project.role_in_project}</td>
-                                    <td className="tp">{task.status}</td>
+                                    <td className="tp">{task?.task_type}</td>
+                                    <td className="tp">{task?.role_in_project.role_in_project}</td>
+                                    <td className="tp">{task?.status}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -345,17 +344,17 @@ useEffect(()=>{
                                        
                                         className="tp font-medium text-gray-900  dark:text-white"
                                     >
-                                        <p className="tp">{student.student.id}</p>
+                                        <p className="tp">{student?.student.id}</p>
                                     </td>
                                     <td className="tp">
-                                      <p>{student.student.first_name}</p>
+                                      <p>{student?.student.first_name}</p>
                                     </td>
-                                    <td className="tp">{student.student.last_name==""?"-":student.student.last_name}</td>
+                                    <td className="tp">{student?.student.last_name==""?"-":student.student.last_name}</td>
                                     <td className="tp">
-                                    <p >{student.start_date?format(student.start_date, "dd MMMM yyyy"):"-"}</p>
+                                    <p >{student?.start_date?format(student.start_date, "dd MMMM yyyy"):"-"}</p>
                                     </td>
                                     <td className="tp">
-                                    <li>{student.end_date?format(student.end_date, "dd MMMM yyyy"):"-"}</li>
+                                    <li>{student?.end_date?format(student.end_date, "dd MMMM yyyy"):"-"}</li>
                                     </td>
                                 </tr>
                             ))}
@@ -394,13 +393,13 @@ useEffect(()=>{
                                        
                                         className="tp font-medium text-gray-900  dark:text-white"
                                     >
-                                        <p className="tp">{metup.title}</p>
+                                        <p className="tp">{metup?.title}</p>
                                     </td>
                                     <td className="tp">
-                                    <p >{metup.date?format(metup.date, "dd MMMM yyyy"):"-"}</p>
+                                    <p >{metup?.date?format(metup.date, "dd MMMM yyyy"):"-"}</p>
                                     </td>
                                     <td className="tp">
-                                      {metup.files.length ?metup.files.map((item:any)=><p key={item.title}>{item.title}</p>):"-"}
+                                      {metup?.files.length ? metup?.files.map((item:any)=><p key={item.title}>{item.title}</p>):"-"}
                                     </td>
                                 </tr>
                             ))}
@@ -468,51 +467,51 @@ useEffect(()=>{
 
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Masala yechish darajasi: Oddiy</p>
-                <p>{user.employee_level_evaluation.problem_solving_easy}</p>
+                <p>{user.employee_level_evaluation?.problem_solving_easy}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Masala yechish darajasi: O'rta</p>
-                <p>{user.employee_level_evaluation.problem_solving_medium}</p>
+                <p>{user.employee_level_evaluation?.problem_solving_medium}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Masala yechish darajasi: Yuqori</p>
-                <p>{user.employee_level_evaluation.problem_solving_hard}</p>
+                <p>{user.employee_level_evaluation?.problem_solving_hard}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Mentorlari (dasturchi soni)</p>
-                <p>{user.employee_level_evaluation.mentorship_count}</p>
+                <p>{user.employee_level_evaluation?.mentorship_count}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Loyihani testlashda ishtirok etish (soni)</p>
-                <p>{user.employee_level_evaluation.project_test_count}</p>
+                <p>{user.employee_level_evaluation?.project_test_count}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Loyiha arxitekturasida ishtirok etish (soni)</p>
-                <p>{user.employee_level_evaluation.project_architecture_count}</p>
+                <p>{user.employee_level_evaluation?.project_architecture_count}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Database arxitekturasini tuzishda qatnashish (soni)</p>
-                <p>{user.employee_level_evaluation.database_architecture_count}</p>
+                <p>{user.employee_level_evaluation?.database_architecture_count}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Orttirib bajarilgan topshiriqlar</p>
-                <p>{user.employee_level_evaluation.additional_tasks_count}</p>
+                <p>{user.employee_level_evaluation?.additional_tasks_count}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Dasturlash sohasida ish tajribasi (yil)</p>
-                <p>{user.employee_level_evaluation.experience_years}</p>
+                <p>{user.employee_level_evaluation?.experience_years}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">MeetUp larda ma'ruza o'qish (soni)</p>
-                <p>{user.employee_level_evaluation.meetup_lecture_count}</p>
+                <p>{user.employee_level_evaluation?.meetup_lecture_count}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Boshqa dasturlash tillarida tajribasi (soni)</p>
-                <p>{user.employee_level_evaluation.other_programming_languages_count}</p>
+                <p>{user.employee_level_evaluation?.other_programming_languages_count}</p>
               </div>
               <div className="flex p-4 border">
                 <p className="w-[400px] font-semibold">Level</p>
-                <p>{user.employee_level_evaluation.level}</p>
+                <p>{user.employee_level_evaluation?.level}</p>
               </div>
               <hr />
               <div className="flex p-4 items-center">
@@ -524,27 +523,27 @@ useEffect(()=>{
                      </div>
                {user?.employee_level_evaluation?.experience_years<5 && ( <div className="flex gap-4">
                   <p className="w-[300px]">Dasturlash sohasida ish tajribasi kerak (yil):</p>
-                     <p>{5-Math.floor(user?.employee_level_evaluation.experience_years)}</p>
+                     <p>{5-Math.floor(user?.employee_level_evaluation?.experience_years)}</p>
                      </div>)}
                      <div className="flex gap-4 py-2">
                      <p className="w-[300px]">Masala yechish: Oddiy</p>
-                     <p>{user?.employee_level_evaluation?.next_level_gaps?.gaps.problem_solving_easy?user?.employee_level_evaluation?.next_level_gaps?.gaps.problem_solving_easy:0}</p>
+                     <p>{user?.employee_level_evaluation?.next_level_gaps?.gaps?.problem_solving_easy?user?.employee_level_evaluation?.next_level_gaps?.gaps?.problem_solving_easy:0}</p>
                      </div>
                      <div className="flex gap-4 py-2">
                 <p className="w-[300px]">Mentorlik qilish (dasturchi soni)</p>
-                <p>{user.employee_level_evaluation?.next_level_gaps?.gaps.mentorship_count?user.employee_level_evaluation?.next_level_gaps?.gaps.mentorship_count:0}</p>
+                <p>{user.employee_level_evaluation?.next_level_gaps?.gaps?.mentorship_count?user?.employee_level_evaluation?.next_level_gaps?.gaps?.mentorship_count:0}</p>
               </div>
                      <div className="flex gap-4 py-2">
                 <p className="w-[300px]">Loyihani testlashda ishtirok etish (soni)</p>
-                <p>{user.employee_level_evaluation?.next_level_gaps?.gaps.project_test_count}</p>
+                <p>{user?.employee_level_evaluation?.next_level_gaps?.gaps?.project_test_count}</p>
               </div>
                      <div className="flex gap-4 py-2">
                 <p className="w-[300px]">Loyiha arxitekturasida ishtirok etish (soni)</p>
-                <p>{user.employee_level_evaluation?.next_level_gaps?.gaps.additional_tasks_count}</p>
+                <p>{user?.employee_level_evaluation?.next_level_gaps?.gaps?.additional_tasks_count}</p>
               </div>
                      <div className="flex gap-4 py-2">
                 <p className="w-[300px]">MeetUp larda ma'ruza o'qish (soni)</p>
-                <p>{user.employee_level_evaluation?.next_level_gaps?.gaps.meetup_lecture_count}</p>
+                <p>{user?.employee_level_evaluation?.next_level_gaps?.gaps?.meetup_lecture_count}</p>
               </div>
                 </div>
               </div>
@@ -552,18 +551,18 @@ useEffect(()=>{
               <div className="flex p-4 items-center">
                 <p className="w-[400px] font-semibold">Keyingi daraja talablari</p>
                 <div>                
-                  {user?.employee_level_evaluation?.next_level_requirements !==null ?  user.employee_level_evaluation.next_level_requirements.map((item:any)=>(<>
-                 <div key={item.language} className="flex1 gap-4 py-2">
+                  {user?.employee_level_evaluation?.next_level_requirements !==null ?  user?.employee_level_evaluation?.next_level_requirements.map((item:any)=>(<>
+                 <div key={item?.language} className="flex1 gap-4 py-2">
                   <p className="w-[300px]">Dasturlash tili:</p>
-                  <p>{item.language}</p>
+                  <p>{item?.language}</p>
                  </div>
                  <div className="flex1 gap-4 py-2">
                   <p className="w-[300px]">Dasturlash tili darajasi:</p>
-                  <p>{item.level}</p>
+                  <p>{item?.level}</p>
                  </div>
                  <div className="flex gap-4 py-2">
                   {/* <p className="w-[300px]">Dasturlash tili asoslari:</p> */}
-                  <div className="w-[600px]">{item.requirements.replaceAll('"',"").split('\n').map((word:string)=><p key={word}>{word}<br /></p>)}</div>
+                  <div className="w-[600px]">{item?.requirements.replaceAll('"',"").split('\n').map((word:string)=><p key={word}>{word}<br /></p>)}</div>
                  </div>
                   </>)):"Talablar mavjud emas"}
 
