@@ -52,36 +52,36 @@ useEffect(()=>{
                <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Familiya</th><th>{user?.last_name}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Email</th><th>{user.email==null?"-":user?.email}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Email</th><th>{user?.email==null?"-":user?.email}</th>
              </tr>
              <tr className="border">
                <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Username</th><th>{user?.username}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Telefon</th><th>{user.phone==null?"-":user?.phone}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Telefon</th><th>{user?.phone==null?"-":user?.phone}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tug'ilgan kun</th><th>{user.birth_date==null?"-":user?.birth_date}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tug'ilgan kun</th><th>{user?.birth_date==null?"-":user?.birth_date}</th>
 
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Address</th><th>{user.address==""?"-":user?.address}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Address</th><th>{user?.address==""?"-":user?.address}</th>
              </tr>
             
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Lavozim</th><th>{user.position==""?"-":user?.position}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Lavozim</th><th>{user?.position==""?"-":user?.position}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Daraja</th><th>{user.level==null?"-":user?.level}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Daraja</th><th>{user?.level==null?"-":user?.level}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ishga olingan sana</th><th>{user.hired_date==null?"-":user?.hired_date}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Ishga olingan sana</th><th>{user?.hired_date==null?"-":user?.hired_date}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tuzilma</th><th>{user.organization.name==null?"-":user?.organization.name}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Tuzilma</th><th>{user?.organization?.name==null?"-":user?.organization.name}</th>
              </tr>
              <tr className="border">
-               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Mutaxassislik</th><th>{user.specialty==null?"-":user?.specialty}</th>
+               <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Mutaxassislik</th><th>{user?.specialty==null?"-":user?.specialty}</th>
              </tr>
              <tr className="border">
                <th className="px-6 py-3 text-left text-sm font-medium border-r-2">Qobiliyat</th><th>{!user?.skills.length?"-":user?.skills.map((item:any)=><span key={item.skill}>{item.skill}</span>,)}</th>
