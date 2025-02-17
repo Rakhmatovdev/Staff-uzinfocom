@@ -1,33 +1,31 @@
-name: React CI/CD
+name: Deploy Frontend
+
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Repositorydan kodni yuklab olish
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: 🏗️ Node.js versiyasini sozlash
-        uses: actions/setup-node@v3
+      - name: Set up SSH agent
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          node-version: 18^
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: 📦 Package-larni o‘rnatish
-        run: npm install
-
-      - name: 🛠️ ESLint bilan kodni tekshirish
-        run: npm run lint
-
-      - name: ⚙️ Build jarayonini ishga tushirish
-        run: npm run build
-
-      - name: 🚀Dev-ga deploy qilish
-        uses: dream_team_front/dev
+      - name: Deploy to Server frontend
+        env:
+          HOST: ${{ secrets.SERVER_HOST }}
+          USER: ${{ secrets.SERVER_USER }}
+        run: |
+          ssh -o StrictHostKeyChecking=no $USER@$HOST "
+          cd /home/dream_team_front/ &&
+          git pull origin main &&
+          npm install &&
+          npm run build
+          "
