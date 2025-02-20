@@ -24,7 +24,7 @@ jobs:
           USER: ${{ secrets.SERVER_USER }}
         run: |
           ssh -o StrictHostKeyChecking=no $USER@$HOST "
-          cd /home/dream_team_front/ &&
+          cd /home/dream_team_front/dev/ &&
           git pull origin main &&
           npm install &&
           npm run build
