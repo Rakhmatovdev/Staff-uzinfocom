@@ -23,10 +23,11 @@ jobs:
           USER: ${{ secrets.SERVER_USER }}
         run: |
           ssh -o StrictHostKeyChecking=no $USER@$HOST "
-          export PATH=\$PATH:/usr/local/bin &&
+          source ~/.nvm/nvm.sh &&
+          nvm use 18 &&
           cd /home/dream_team_front/dev/ &&
           git stash &&
           git pull origin main &&
-          npm install --force &&
+          npm install &&
           npm run build
           "
