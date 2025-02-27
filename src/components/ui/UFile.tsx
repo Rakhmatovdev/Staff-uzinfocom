@@ -7,17 +7,15 @@ import axios from 'axios';
 const UFile: React.FC = () => {
   const [fileList, setFileList] = useState<UploadFile[]>([]);
 
-  // Fayl yuklashni oldini olish va faylni saqlash
   const beforeUpload = (file: UploadFile) => {
-    setFileList((prevList) => [...prevList, file]); // Faylni mahalliy holatda saqlash
-    return false; // Faylni avtomatik yuklashni to'xtatish
+    setFileList((prevList) => [...prevList, file]); 
+    return false; 
   };
 
-  // Fayllarni qo'lda yuborish
   const handleUpload = async () => {
     const formData = new FormData();
     fileList.forEach((file) => {
-      formData.append('files', file as any); // Fayllarni qo'shish
+      formData.append('files', file as any);
     });
 
     try {

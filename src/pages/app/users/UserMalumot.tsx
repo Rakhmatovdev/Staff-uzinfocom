@@ -1,7 +1,5 @@
 const UserMalumot = () => {
-  return (
-    <div>UserMalumot</div>
-  )
-}
+  return <div>UserMalumot</div>;
+};
 
-export default UserMalumot
+export default UserMalumot;

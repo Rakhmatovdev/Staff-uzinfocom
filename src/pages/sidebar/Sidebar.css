@@ -1,0 +1,50 @@
+.ant-menu-submenu-popup {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: 4px;
+  background-color: #0e1f33;
+  border-radius: 8px;
+}
+
+.ant-menu-submenu-title {
+  color: white !important;
+}
+
+.ant-menu-item {
+  color: white !important;
+}
+
+.ant-menu-item:hover {
+  background-color: #1e2a3b !important;
+}
+/* Menu item uchun umumiy markazlashtirish */
+.ant-menu-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 12px 16px !important;
+}
+
+/* Collapsed holatda iconlarni markazga tushirish */
+.ant-menu-inline-collapsed .ant-menu-item {
+  justify-content: center !important;
+  padding: 150px 10px !important;
+}
+
+/* Collapsed holatda ham iconni to‘liq markazlashtirish */
+.ant-menu-inline-collapsed .ant-menu-item .anticon {
+  font-size: 20px !important;
+  line-height: 1 !important;
+  margin: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Selected bo‘lganda yomon ko‘rinishni yo‘qotish */
+.ant-menu-item-selected {
+  background-color: #1e293b !important;
+  border-radius: 8px !important;
+  padding: 0px !important;
+}

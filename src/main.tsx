@@ -8,30 +8,28 @@ import Settings from "./pages/app/setting/Settings";
 import Login from "./auth/components/Login";
 import Home from "./pages/home/Home";
 import PasswordChange from "./pages/app/setting/PasswordChange";
-import Statistica from "@/pages/app/users/Statistica";
-
-
+import Statistic from "./pages/app/users/Statistic";
+import Report from "./pages/app/report/Report";
 
 createRoot(document.getElementById("root")!).render(
   <>
     <QueryProvider>
-        <BrowserRouter>
-          <Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<App />}>
+            <Route path="/" element={<Home />} />
+            <Route path={"/user"} element={<Statistic />} />
+            <Route path="/users/settings" element={<Settings />} />
+            <Route path="/users/change" element={<PasswordChange />} />
+            <Route path={"/report"} element={<Report />} />
+            
+          </Route>
 
-            <Route element={<App />} >
-            <Route path="/" element={<Home/>}/>
-           <Route path={'/user'} element={<Statistica/>}/>
-            <Route path="/users/settings" element={<Settings/>}/>
-            <Route path="/users/change" element={<PasswordChange/>}/>
-            </Route>
-
-            <Route element={<AuthLayout />}>
-           <Route path="/login" element={<Login/>}/>
-            </Route>
-
-          </Routes>
-        </BrowserRouter>
+          <Route element={<AuthLayout />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </QueryProvider>
-   
   </>
 );

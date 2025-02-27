@@ -2,32 +2,29 @@ import UBreadcrumb from "@/components/ui/UBreadcrumb";
 import UInput from "@/components/ui/UInput";
 import userService from "@/services/user-service";
 import { TPassword } from "@/types";
-import { itemPassword, pasCharacters, pasTitle} from "@/types/data";
+import { itemPassword, pasCharacters, pasTitle } from "@/types/data";
 import { EyeOutlined } from "@ant-design/icons";
 import { useMutation } from "@tanstack/react-query";
 import { SubmitHandler, useForm } from "react-hook-form";
 const PasswordChange = () => {
-  const { control, handleSubmit,reset } = useForm({
+  const { control, handleSubmit, reset } = useForm({
     defaultValues: {
       password: "",
       confirm_password: "",
     },
   });
 
-  const {mutate} = useMutation({
+  const { mutate } = useMutation({
     mutationKey: ["change password"],
-    mutationFn: userService.confirm
-});
+    mutationFn: userService.confirm,
+  });
 
-  const onSubmit: SubmitHandler<TPassword> = (data) =>{
-  mutate(data)
-     reset()
-    console.log(data);
-    
-    };
+  const onSubmit: SubmitHandler<TPassword> = (data) => {
+    mutate(data);
+    reset();
+  };
   return (
     <div className="soh">
- <UBreadcrumb  items={itemPassword} />
       <div className="mt-7">
         <form
           className="flex border  flex-col  rounded "
@@ -73,14 +70,15 @@ const PasswordChange = () => {
                     ))}
                 </div>
               </div>
-
             </div>
           </div>
 
-<button type="submit" className=" sm:px-3 px-2 py-1 text-sm sm:text-base sm:py-2 bg-blue-500 font-bold text-white rounded w-44 ml-2 mb-2 sm:ml-4 sm:mb-4 hover:bg-blue-600">
-  Change Password
-</button>
-
+          <button
+            type="submit"
+            className=" sm:px-3 px-2 py-1 text-sm sm:text-base sm:py-2 bg-blue-500 font-bold text-white rounded w-44 ml-2 mb-2 sm:ml-4 sm:mb-4 hover:bg-blue-600"
+          >
+            Change Password
+          </button>
         </form>
       </div>
     </div>

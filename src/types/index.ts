@@ -12,12 +12,13 @@ export type TDeleted = {
   delete_id: boolean | string | null;
 };
 export type TExamA = {
-  category: string | null |number,
-  topics:any,
-  start_time: string | number,
-  end_time: string | number,
-  total_questions: null | string | number,
-  time_limit: string | number,
+  category: string | null | number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  topics: any;
+  start_time: string | number;
+  end_time: string | number;
+  total_questions: null | string | number;
+  time_limit: string | number;
 };
 export type TCategorieD = {
   category_id: string;
@@ -25,10 +26,10 @@ export type TCategorieD = {
   file: File | null;
 };
 
-export type TPassword={
-  password: string,
-  confirm_password: string,
-}
+export type TPassword = {
+  password: string;
+  confirm_password: string;
+};
 
 export interface LoginData {
   username: string;
@@ -42,3 +43,4 @@ export interface RegisterData {
   password: string;
   password_confirm: string;
 }
+
