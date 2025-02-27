@@ -1,8 +1,7 @@
-import UBreadcrumb from "@/components/ui/UBreadcrumb";
 import UInput from "@/components/ui/UInput";
 import userService from "@/services/user-service";
 import { TPassword } from "@/types";
-import { itemPassword, pasCharacters, pasTitle } from "@/types/data";
+import { pasCharacters, pasTitle } from "@/types/data";
 import { EyeOutlined } from "@ant-design/icons";
 import { useMutation } from "@tanstack/react-query";
 import { SubmitHandler, useForm } from "react-hook-form";

@@ -4,8 +4,6 @@ import { DatePicker, TimePicker } from "antd";
 import { useState } from "react";
 
 const ImportandDate = () => {
-  const datan = Date();
-
   const [date, setDate] = useState(null);
 
   const handleChange = (date: any, dateString: any) => {
