@@ -484,7 +484,7 @@ body {
   .ant-pagination-options-size-changer {
   /* display: inline-block; */
   width: auto;
-  display: none;
+  /* display: none; */
 }
 .ant-menu-item {
   padding: 9px 18px !important;
