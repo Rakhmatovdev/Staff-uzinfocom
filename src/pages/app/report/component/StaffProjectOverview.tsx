@@ -130,6 +130,7 @@ const StaffProjectOverview = () => {
         total={data?.count || 0}
         onChange={(page) => setCurrentPage(page)}
         pageSize={10}
+        showSizeChanger={false}
       />
     </>
   );
