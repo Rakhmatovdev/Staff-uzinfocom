@@ -416,21 +416,19 @@ body {
   font-weight: bold;
   color: #fff;
 }
-:where(.css-dev-only-do-not-override-1wwf28x).ant-input-search
-  .ant-input-affix-wrapper {
+.xidir-aka .ant-input-search .ant-input-affix-wrapper {
   height: 45px;
   border-radius: 0;
 }
-:where(.css-dev-only-do-not-override-1wwf28x).ant-input-search
-  .ant-input-search-button {
+.xidir-aka .ant-input-search .ant-input-search-button {
   height: 45px;
   width: 45px;
 }
-:where(.css-dev-only-do-not-override-1wwf28x).ant-btn-variant-solid {
+.xidir-aka .ant-btn-variant-solid {
   color: #fff;
   background: #011b3f;
 }
-:where(.css-dev-only-do-not-override-1wwf28x).ant-btn-variant-solid:hover {
+.xidir-aka .ant-btn-variant-solid:hover {
   color: #fff;
   background: #053272 !important;
 }

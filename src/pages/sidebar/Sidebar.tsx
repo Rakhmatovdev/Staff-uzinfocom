@@ -6,7 +6,7 @@ import {
 } from "@ant-design/icons";
 import { Button, Layout, Menu, MenuProps, theme } from "antd";
 import { useEffect, useState } from "react";
-import { Outlet,  useNavigate } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import logo from "../../../public/UZINFOCOM (2).png";
 import Navbar from "../home/Navbar";
 
@@ -35,7 +35,7 @@ export default function ISidebar() {
   const roleData = localStorage.getItem("role");
   const userRole = roleData ? JSON.parse(roleData) : null;
   const isSuperUser =
-  userRole && userRole.groups && userRole.groups[0] === "superuser";
+    userRole && userRole.groups && userRole.groups[0] === "superuser";
 
   useEffect(() => {
     if (!token) {
@@ -137,7 +137,7 @@ export default function ISidebar() {
 
             <Layout>
               <Header
-                className="shadow-md relative z-50"
+                className="shadow-md relative z-50 xidir-aka"
                 style={{
                   padding: 0,
                   background: colorBgContainer,
