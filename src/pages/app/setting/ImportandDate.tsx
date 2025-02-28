@@ -11,7 +11,7 @@ const ImportandDate = () => {
       setDate(dateString);
     }
   };
-
+  console.log(date);
   return (
     <div className=" w-full rounded">
       <div className="fff sm:mt-2 sm:gap-32">

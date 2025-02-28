@@ -63,7 +63,6 @@ export default function ISidebar() {
     },
   ];
 
-  // Agar foydalanuvchi superuser bo‘lsa, "Hisobotlar" menyusini qo‘shamiz
   if (isSuperUser) {
     menuItems.push({
       key: "/report",
